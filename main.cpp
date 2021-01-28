@@ -3,3 +3,12 @@
 #include <fstream>
 #include <string>
 
+using namespace std;
+
+bool IsLoggedIn()
+{
+    string username, password, un, pw;
+
+    cout << "Enter Your Username: "; cin >> username;
+    cout << "Enter Password: "; cin >> password;
+}
