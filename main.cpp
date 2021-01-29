@@ -38,6 +38,28 @@ int main()
         cout << "select username: ", cin >> username;
         cout << "select password: ", cin >> password;
 
-        ofstream file,
+        ofstream file;
+        file.open("data\\" + username + ".txt");
+        file << username << endl << password;
+        file.close();
+
+        main();
+    }
+    else if (choice == 2)
+    {
+        bool status = IsLoggedIn();
+
+        if(!status)
+        {
+            cout << "False Loggin detected."<< endl;
+            system("Pause");
+            return 0;
+        }
+        else
+        {
+            cout << "Successfully Logged In!" << endl;
+            system("Pause");
+            return 1;
+        }
     }
 }
